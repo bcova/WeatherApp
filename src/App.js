@@ -1,7 +1,5 @@
 import React, {useEffect,useState} from 'react';
 import useDebounce from './components/useDebounce';
-import lottie from 'lottie-web';
-import { defineElement } from 'lord-icon-element';
 import './App.css'
 
 
@@ -15,7 +13,7 @@ const [text, setText]= useState('')
 const [value, setValue] = useState("");
 const [place, setPlace] = useState("");
 const [ip, setIp] = useState(0);
-defineElement(lottie.loadAnimation);
+
 
 const debouncedSearch = useDebounce(value,2000)
 const debouncedLoad = useDebounce(false,2000)
